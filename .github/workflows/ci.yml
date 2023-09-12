@@ -88,8 +88,8 @@ jobs:
         if: needs.build-context.outputs.push_image == 'true'
         uses: docker/login-action@v2
         with:
-          username: ${{ secrets.lupu.rosalbastru@gmail.com }}
-          password: ${{ secrets.dckr_pat_Y-xNwzyRs8Db5WwXG40Q9mWoxfM }}
+          username: ${{ secrets.DOCKERHUB_USERNAMEDOCKERHUB_USERNAME}}
+          password: ${{ secrets.DOCKERHUB_TOKENDOCKERHUB_TOKEN }}
 
       - name: Build crapi-identity image
         uses: docker/build-push-action@v2
